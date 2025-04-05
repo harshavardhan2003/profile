@@ -1,329 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsha Vardhan Ravuri</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f4e8; /* Very light beige background */
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsha Vardhan Ravuri | Portfolio</title>
 
-        .watermark {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.05; /* Even lighter watermark */
-            font-size: 10rem;
-            color: #d1b89e; /* Very light brown watermark */
-            z-index: -1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            pointer-events: none;
-        }
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 
-        header {
-            background-color: #a68d63; /* Light brown header */
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eef3f8;
+    }
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            color: #ffffff;
-        }
+    header {
+      background-color: #0a66c2;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-            margin: 10px 0;
-        }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+    }
 
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 2em;
+    }
 
-        nav ul li a {
-            background-color: #c8b4a6; /* Light beige buttons */
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 8px 15px;
-            border-radius: 20px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        nav ul li a:hover {
-            background-color: #a68d63; /* Darker brown on hover */
-            transform: scale(1.1);
-        }
+    nav ul {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
 
-        .social-icons {
-            text-align: center;
-            margin: 20px 0;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #0a66c2;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
 
-        .social-icons a {
-            margin: 0 8px;
-            color: #a68d63; /* Light brown social icons */
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: transform 0.3s;
-        }
+    nav ul li a:hover {
+      background-color: #e6f0fb;
+    }
 
-        .social-icons a:hover {
-            transform: scale(1.2);
-        }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 
-        .content-section {
-            padding: 40px 20px;
-            background-color: #ffffff;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
+    h2 {
+      color: #0a66c2;
+      margin-bottom: 20px;
+    }
 
-        .content-section:hover {
-            transform: scale(1.05);
-        }
+    .timeline-container {
+      position: relative;
+      margin-left: 30px;
+      padding-left: 30px;
+    }
 
-        .content-section h2 {
-            font-size: 2rem;
-            color: #a68d63;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-        }
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background-color: #0a66c2;
+    }
 
-        .content-section p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
+    .timeline-card {
+      position: relative;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
+    .timeline-card::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: #0a66c2;
+      border-radius: 50%;
+      left: -29px;
+      top: 20px;
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px #eef3f8;
+    }
 
-        table, th, td {
-            border: 1px solid #d1b89e; /* Light brown table border */
-        }
+    .timeline-card:hover {
+      transform: translateY(-3px);
+    }
 
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
+    .tooltip {
+      visibility: hidden;
+      position: absolute;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      padding: 5px 8px;
+      border-radius: 6px;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 0.8em;
+    }
 
-        th {
-            background-color: #a68d63; /* Light brown header */
-            color: white;
-        }
+    .timeline-card:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
 
-        td {
-            background-color: #f5f5f5;
-        }
+    .project-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 
-        .content-section h3 {
-            font-size: 1.5rem;
-            color: #a68d63;
-            margin-top: 20px;
-        }
+    .dropdown-title {
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+    }
 
-        .skills-list {
-            list-style-type: none;
-            padding: 0;
-            columns: 2;
-        }
+    .dropdown-content {
+      display: none;
+      padding-top: 10px;
+    }
 
-        .skills-list li {
-            background-color: #f0e8d3; /* Light beige skills background */
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
 
-        .frame {
-            border: 2px solid #a68d63; /* Light brown border */
-            border-radius: 10px;
-            padding: 20px;
-            background-color: #ffffff;
-        }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
 
-        .social-icons a {
-            font-size: 0.9rem;
-        }
-    </style>
+    th, td {
+      padding: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0a66c2;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="watermark">HR</div>
-    <header>
-        <h1>HARSHA VARDHAN RAVURI</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#internships">Internships</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#activities">Other Activities</a></li>
-        </ul>
-    </nav>
+  <header>
+    <img src="your-image.jpg" alt="Harsha Vardhan Ravuri" />
+    <h1>Harsha Vardhan Ravuri</h1>
+    <p>Aspiring Data Analyst | ML Enthusiast | Computer Science Graduate</p>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/harsha-vardhan-ravuri-147973259" target="_blank">LinkedIn</a>
-        <a href="https://github.com/harshavardhan2003" target="_blank">GitHub</a>
-        <a href="https://api.whatsapp.com/send?phone=yourwhatsapplink" target="_blank">WhatsApp</a>
-        <a href="https://www.instagram.com/harsha_ravuri.18?igsh=MzhxdjR3bWF2bW96" target="_blank">Instagram</a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+      <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a Computer Science graduate with hands-on experience in AI and ML. Passionate about solving problems using data and building innovative solutions. Skilled in Python, Data Analytics, and Machine Learning tools.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline-container">
+      <div class="timeline-card">
+        <h3>Product Consultant</h3>
+        <p><strong>Company:</strong> Caliber Technologies Pvt Ltd</p>
+        <p><strong>Duration:</strong> 2024 – Present</p>
+        <span class="tooltip">Client communication & product solutions</span>
+      </div>
+      <div class="timeline-card">
+        <h3>AI/ML Intern</h3>
+        <p><strong>Company:</strong> Code Gnan</p>
+        <p><strong>Duration:</strong> Nov 2023 – Apr 2024</p>
+        <p>Built ML models using Python; focused on data preprocessing, feature selection, and model optimization.</p>
+        <span class="tooltip">Hands-on with scikit-learn and pandas</span>
+      </div>
     </div>
+  </section>
 
-    <section id="about-me" class="content-section">
-        <h2>About Me</h2>
-        <div class="frame">
-            <p>🌟 Dedicated Computer Science Student | Technical Enthusiast | Punctual Professional 🌟</p>
-            <p>🎓 Currently pursuing a degree in Computer Science with a strong foundation in technical concepts and practical skills.</p>
-            <p>⏰ Known for my unwavering commitment to punctuality, I excel in meeting deadlines and delivering results promptly.</p>
-            <p>💼 Confident and proactive, I tackle challenges with determination, ensuring tasks are completed efficiently and to the highest standards.</p>
-            <p>🌍 Adaptable team player with a knack for thriving in dynamic environments, adept at adjusting to various professional settings.</p>
-            <p>🔍 Seeking opportunities to apply my technical knowledge and contribute effectively to innovative projects.</p>
-        </div>
-    </section>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline-container">
+      <div class="timeline-card">
+        <h3>Bachelor of Technology</h3>
+        <p><strong>College:</strong> KKR & KSR Institute Of Technology And Sciences<br>
+           <strong>Stream:</strong> CSE<br>
+           <strong>Year:</strong> 2024<br>
+           <strong>CGPA:</strong> 8.08</p>
+        <span class="tooltip">Final year project in Machine Learning</span>
+      </div>
+      <div class="timeline-card">
+        <h3>Intermediate</h3>
+        <p><strong>College:</strong> Xperts Junior College<br>
+           <strong>Stream:</strong> MPC<br>
+           <strong>Year:</strong> 2020<br>
+           <strong>CGPA:</strong> 8.89</p>
+        <span class="tooltip">Excelled in core science subjects</span>
+      </div>
+      <div class="timeline-card">
+        <h3>Secondary Education</h3>
+        <p><strong>School:</strong> Sri Somanadh Green Field Public School<br>
+           <strong>Board:</strong> CBSE<br>
+           <strong>Year:</strong> 2018<br>
+           <strong>CGPA:</strong> 9.02</p>
+        <span class="tooltip">Strong academic foundation</span>
+      </div>
+    </div>
+  </section>
 
-    <section id="internships" class="content-section">
-        <h2>Internships</h2>
-        <table>
-            <tr>
-                <th>Title</th>
-                <th>Company</th>
-                <th>Duration</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>AI-ML Internship</td>
-                <td>Codegnan IT Solutions</td>
-                <td>Nov 2023 - Apr 2024</td>
-                <td>During my internship at Codegnan as an AI-ML Intern, I focused on developing and implementing machine learning models to tackle real-world challenges. My responsibilities encompassed designing and optimizing algorithms, conducting thorough data preprocessing, and applying advanced statistical methods to enhance the accuracy and efficiency of the models. Leveraging Python along with prominent machine learning frameworks, I built and evaluated predictive models that provided actionable insights crucial for strategic decision-making. By combining technical expertise with a practical approach, I contributed to the organization's goal of harnessing AI to solve complex problems effectively and drive innovation in data-driven solutions.</td>
-            </tr>
-            <tr>
-                <td>Web Development Intern</td>
-                <td>Mad Blocks Pvt Limited</td>
-                <td>Aug 2022 - Oct 2022</td>
-                <td>During my internship at Mad Blocks Pvt Ltd, I engaged in activities closely aligned with the technologies utilized in their project "Online E-Diary". My primary focus was on gaining practical experience in full-stack development using Python and SQL for database management. One of my key responsibilities involved enhancing security measures by implementing secure login protocols and password features, ensuring robust protection of user data within web applications. This hands-on experience equipped me with valuable skills in backend development, database design, and security implementation, fostering a comprehensive understanding of creating reliable and secure digital solutions. My contributions during the internship underscored my commitment to leveraging technology to deliver user-centric applications that prioritize both functionality and data security.</td>
-            </tr>
-        </table>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3 class="dropdown-title">AI-Driven Used Car Price Detection</h3>
+      <div class="dropdown-content">
+        <ul>
+          <li><strong>Goal:</strong> Predict used car prices</li>
+          <li><strong>Methods:</strong> Regression with Random Forest</li>
+          <li><strong>Accuracy:</strong> 85%</li>
+          <li><strong>Tools:</strong> Python, Pandas, Scikit-learn</li>
+        </ul>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3 class="dropdown-title">Best T20I Squad Using Power BI</h3>
+      <div class="dropdown-content">
+        <ul>
+          <li><strong>Goal:</strong> Analyze cricket stats for T20I performance</li>
+          <li><strong>Tools:</strong> Power BI, Excel</li>
+          <li><strong>Outcome:</strong> Data-driven team selection</li>
+        </ul>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3 class="dropdown-title">Online E-Diary</h3>
+      <div class="dropdown-content">
+        <ul>
+          <li><strong>Goal:</strong> Build a personal diary system</li>
+          <li><strong>Features:</strong> User authentication, encryption</li>
+          <li><strong>Tools:</strong> Python, Flask, SQLite</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects" class="content-section">
-        <h2>Projects</h2>
-        <table>
-            <tr>
-                <th>Title</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>AI Driven Car Price Detection</td>
-                <td>I have developed an advanced AI model using machine learning techniques to predict the prices of used cars with a high degree of accuracy. By analyzing key factors such as mileage, kilometers driven, year of manufacture, market trends, and the specific design and model of the cars, the model provides reliable estimates of their market value. Leveraging the Random Forest Regression algorithm, known for its ability to handle complex datasets and improve prediction accuracy, I achieved an impressive 85% accuracy rate in forecasting used car prices. This project not only demonstrates my expertise in machine learning and data analysis but also showcases my ability to apply these skills to real-world scenarios, providing valuable insights for both buyers and sellers in the automotive market.</td>
-            </tr>
-            <tr>
-                <td>Online E-Diary</td>
-                <td>I designed and developed a robust web application focused on enabling users to securely document their daily experiences and emotions. Leveraging full-stack development tools with Python for backend functionalities and SQL for database management, the platform ensures efficient data handling and seamless user interactions. Security was a paramount concern throughout the development process, and I implemented rigorous measures such as secure login protocols and password encryption to safeguard user accounts and sensitive information. By prioritizing both functionality and security, the application provides a reliable and user-friendly environment for individuals to reflect on and track their daily journey effectively.</td>
-            </tr>
-        </table>
-    </section>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <table>
+      <tr><th>Certification</th><th>Organization</th><th>Year</th></tr>
+      <tr><td>Machine Learning Foundations</td><td>AWS Academy</td><td>2022</td></tr>
+      <tr><td>Python for Data Science</td><td>IBM</td><td>2023</td></tr>
+      <tr><td>Cybersecurity Essentials</td><td>CISCO</td><td>2023</td></tr>
+      <tr><td>Python Programing</td><td>Hacker Rank</td><td>2023</td></tr>
+      <tr><td>Data Visualization with Python</td><td>IBM</td><td>2024</td></tr>
+      <tr><td>Data Analytics</td><td>Google</td><td>2024</td></tr>
+      <tr><td>My SQL Data Base</td><td>Hacker Rank</td><td>2024</td></tr>
 
-    <section id="certificates" class="content-section">
-        <h2>Certificates</h2>
-        <!-- Placeholder for certificates -->
-        <!-- Add images of certificates here -->
-    </section>
+    </table>
+  </section>
 
-    <section id="education" class="content-section">
-        <h2>Education</h2>
-        <table>
-            <tr>
-                <th>Stream</th>
-                <th>College Name</th>
-                <th>Grade</th>
-                <th>Duration</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Computer Science</td>
-                <td>KKR & KSR Institute Of Technology And Sciences</td>
-                <td>8.03 / 10</td>
-                <td>Aug 2020 — May 2024</td>
-                <td>I specialize in programming languages, data structures, algorithms, and software systems design, focusing on practical skills to develop efficient software solutions. Through hands-on learning, I aim to enhance my ability to design and optimize systems effectively for complex challenges.</td>
-            </tr>
-            <tr>
-                <td>MPC</td>
-                <td>Xperts Junior College</td>
-                <td>8.89 / 10</td>
-                <td>Jul 2018 — Apr 2020</td>
-                <td>I possess strong mathematical and problem-solving skills, which I continually cultivate to approach and solve intricate challenges with precision and creativity. These skills enable me to analyze problems critically, devise innovative solutions, and implement them efficiently, contributing to effective problem-solving in various domains.</td>
-            </tr>
-            <tr>
-                <td>Central Board Of Secondary Education</td>
-                <td>Vignan High School</td>
-                <td>407 / 500</td>
-                <td>Apr 2018</td>
-                <td>I excelled in my 10th class with a strong focus on science, mathematics, and social subjects, demonstrating a deep understanding and proficiency in each area. My achievements reflect my ability to tackle challenging concepts, apply analytical thinking to solve problems effectively, and communicate findings clearly. These subjects have provided me with a solid foundation for further academic growth and practical application in various fields.</td>
-            </tr>
-        </table>
-    </section>
+  <section id="contact">
+  <h2>Contact</h2>
+  <div style="display: flex; gap: 20px; font-size: 1.5em;">
+    <a href="mailto:ravuriharsha24@gmail.com" target="_blank" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/harsha-vardhan-ravuri-147973259/" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/harshavardhan2003" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</section>
 
-    <section id="skills" class="content-section">
-        <h2>Skills</h2>
-        <div class="frame">
-            <h3>Technical Skills</h3>
-            <ul class="skills-list">
-                <li>C</li>
-                <li>Python (Numpy, Pandas, Matplotlib)</li>
-                <li>Java</li>
-                <li>MySQL</li>
-                <li>HTML & CSS</li>
-                <li>DSA</li>
-                <li>Microsoft Office</li>
-                <li>Microsoft Excel</li>
-            </ul>
-            <h3>Technologies</h3>
-            <ul class="skills-list">
-                <li>Machine Learning</li>
-                <li>Web Development</li>
-            </ul>
-            <h3>Tools</h3>
-            <ul class="skills-list">
-                <li>Visual Studio Code</li>
-                <li>GitHub</li>
-            </ul>
-            <h3>Soft Skills</h3>
-            <ul class="skills-list">
-                <li>Leadership</li>
-                <li>Teamwork</li>
-            </ul>
-        </div>
-    </section>
 
-    <section id="activities" class="content-section">
-        <h2>Other Activities</h2>
-        <h3>Cricket</h3>
-        <div class="frame">
-            <p>I was a valuable cricket player for both my college and school teams, contributing significantly to our successes on the field. My skills in cricket were honed through dedicated practice and matches, where I demonstrated leadership, teamwork, and a competitive spirit. Playing for these teams not only enhanced my athletic abilities but also taught me invaluable lessons in discipline, perseverance, and sportsmanship. These experiences enriched my overall development and shaped my approach to challenges both on and off the field.</p>
-        </div>
-    </section>
+
+  <footer>
+    <p>&copy; 2024 Harsha Vardhan Ravuri. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdowns = document.querySelectorAll('.dropdown-title');
+      dropdowns.forEach(title => {
+        title.addEventListener('click', () => {
+          const content = title.nextElementSibling;
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const section = document.querySelector(this.getAttribute('href'));
+          section.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
